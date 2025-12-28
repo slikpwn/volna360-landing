@@ -1,13 +1,13 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
-  images: {
-    unoptimized: true,
-  },
-  // Для кастомного домена basePath НЕ НУЖЕН!
-  basePath: '',
-  assetPrefix: '',
-};
+// next.config.ts (ПОЛНАЯ ВЕРСИЯ)
+import type { NextConfig } from 'next'
 
-module.exports = nextConfig;
+const nextConfig: NextConfig = {
+  output: 'export',           // ← КРИТИЧНО для GitHub Pages
+  trailingSlash: true,        // Для корректных путей
+  images: {
+    unoptimized: true,        // GitHub Pages не поддерживает Image Optimization
+  },
+  // basePath НЕ нужен для кастомного домена volna360.ru
+}
+
+export default nextConfig
