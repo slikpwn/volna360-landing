@@ -2,34 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c753c0bb-916e-4b73-81f9-c4593bde2650" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/volna360-landing.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/page.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/AnimatedCounter.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ComparisonTimeline.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ComparisonTimeline.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/CursorSpotlight.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/FloatingBubbles.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/FloatingBubbles.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Header.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Header.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/MagneticButton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/PhoneMockup.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/PhoneMockup.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Roadmap.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Roadmap.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ScrollProgressRing.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ScrollProgressRing.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ThemeToggle.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ThemeToggle.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/TiltCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/TypeWriter.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hooks/useMousePosition.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hooks/useScrollAnimation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
