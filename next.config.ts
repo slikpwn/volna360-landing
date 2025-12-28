@@ -5,9 +5,7 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   images: {
     unoptimized: true
-  },
-  basePath: '/volna360-landing',
-  assetPrefix: '/volna360-landing/'
+  }
 }
 
 export default nextConfig

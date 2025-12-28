@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import styles from './Header.module.css';
 
 // Базовый путь для GitHub Pages (замени 'volna360-landing' на название твоего репозитория)
-const BASE_PATH = process.env.NODE_ENV === 'production' ? '/volna360-landing' : '';
+const BASE_PATH = '';
 
 interface HeaderProps {
   botLink: string;

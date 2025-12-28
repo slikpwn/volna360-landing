@@ -13,7 +13,7 @@ import FloatingBubbles from '@/components/FloatingBubbles';
 const BOT_LINK = 'https://t.me/Volna360_bot';
 
 // Базовый путь для GitHub Pages (замени 'volna360-landing' на название твоего репозитория)
-const BASE_PATH = process.env.NODE_ENV === 'production' ? '/volna360-landing' : '';
+const BASE_PATH = '';
 
 // ==================== ICONS ====================
 
