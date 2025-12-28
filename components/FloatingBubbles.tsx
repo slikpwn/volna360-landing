@@ -1,100 +1,48 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import styles from './FloatingBubbles.module.css';
-
-interface Bubble {
-  id: number;
-  x: number;
-  y: number;
-  size: number;
-  speedX: number;
-  speedY: number;
-  opacity: number;
-  hue: number;
-}
-
 export default function FloatingBubbles() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const bubblesRef = useRef<Bubble[]>([]);
-  const animationRef = useRef<number>();
+  const bubbles = [
+    { id: 1, size: 280, left: '10%', top: '20%', hue: 180, opacity: 0.6, duration: 25, delay: 0 },
+    { id: 2, size: 200, left: '75%', top: '15%', hue: 200, opacity: 0.55, duration: 30, delay: -5 },
+    { id: 3, size: 320, left: '85%', top: '55%', hue: 220, opacity: 0.5, duration: 35, delay: -10 },
+    { id: 4, size: 150, left: '15%', top: '65%', hue: 190, opacity: 0.6, duration: 28, delay: -8 },
+    { id: 5, size: 250, left: '50%', top: '35%', hue: 210, opacity: 0.5, duration: 32, delay: -12 },
+    { id: 6, size: 180, left: '25%', top: '80%', hue: 175, opacity: 0.55, duration: 27, delay: -3 },
+    { id: 7, size: 220, left: '88%', top: '25%', hue: 195, opacity: 0.5, duration: 33, delay: -15 },
+    { id: 8, size: 160, left: '8%', top: '45%', hue: 185, opacity: 0.6, duration: 29, delay: -7 },
+  ];
 
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    // Create bubbles
-    const bubbleCount = 15;
-    bubblesRef.current = Array.from({ length: bubbleCount }, (_, i) => ({
-      id: i,
-      x: Math.random() * window.innerWidth,
-      y: Math.random() * window.innerHeight,
-      size: 20 + Math.random() * 60,
-      speedX: (Math.random() - 0.5) * 0.5,
-      speedY: (Math.random() - 0.5) * 0.5,
-      opacity: 0.1 + Math.random() * 0.2,
-      hue: Math.random() * 60 + 170, // cyan to purple range
-    }));
-
-    // Create bubble elements
-    bubblesRef.current.forEach((bubble) => {
-      const el = document.createElement('div');
-      el.className = styles.bubble;
-      el.id = `bubble-${bubble.id}`;
-      el.style.width = `${bubble.size}px`;
-      el.style.height = `${bubble.size}px`;
-      el.style.left = `${bubble.x}px`;
-      el.style.top = `${bubble.y}px`;
-      el.style.opacity = `${bubble.opacity}`;
-      el.style.background = `radial-gradient(circle, hsla(${bubble.hue}, 80%, 60%, 0.4), transparent 70%)`;
-      container.appendChild(el);
-    });
-
-    // Animation loop
-    const animate = () => {
-      bubblesRef.current.forEach((bubble) => {
-        bubble.x += bubble.speedX;
-        bubble.y += bubble.speedY;
-
-        // Bounce off edges
-        if (bubble.x < -bubble.size) bubble.x = window.innerWidth;
-        if (bubble.x > window.innerWidth) bubble.x = -bubble.size;
-        if (bubble.y < -bubble.size) bubble.y = window.innerHeight;
-        if (bubble.y > window.innerHeight) bubble.y = -bubble.size;
-
-        const el = document.getElementById(`bubble-${bubble.id}`);
-        if (el) {
-          el.style.left = `${bubble.x}px`;
-          el.style.top = `${bubble.y}px`;
-        }
-      });
-
-      animationRef.current = requestAnimationFrame(animate);
-    };
-
-    animate();
-
-    // Handle resize
-    const handleResize = () => {
-      bubblesRef.current.forEach((bubble) => {
-        if (bubble.x > window.innerWidth) bubble.x = window.innerWidth * Math.random();
-        if (bubble.y > window.innerHeight) bubble.y = window.innerHeight * Math.random();
-      });
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
-      window.removeEventListener('resize', handleResize);
-      // Clean up bubbles
-      while (container.firstChild) {
-        container.removeChild(container.firstChild);
-      }
-    };
-  }, []);
-
-  return <div ref={containerRef} className={styles.container} />;
+  return (
+    <div
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        zIndex: 50,
+        pointerEvents: 'none',
+        overflow: 'hidden',
+      }}
+    >
+      {bubbles.map((b) => (
+        <div
+          key={b.id}
+          style={{
+            position: 'absolute',
+            width: b.size,
+            height: b.size,
+            left: b.left,
+            top: b.top,
+            borderRadius: '50%',
+            background: `radial-gradient(circle, hsla(${b.hue}, 100%, 60%, 0.7), transparent 70%)`,
+            filter: 'blur(30px)',
+            opacity: b.opacity,
+            animation: `floatBubble ${b.duration}s ease-in-out infinite`,
+            animationDelay: `${b.delay}s`,
+          }}
+        />
+      ))}
+    </div>
+  );
 }

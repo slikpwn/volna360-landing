@@ -1,13 +1,12 @@
-// next.config.ts (ПОЛНАЯ ВЕРСИЯ)
-import type { NextConfig } from 'next'
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  output: 'export',           // ← КРИТИЧНО для GitHub Pages
-  trailingSlash: true,        // Для корректных путей
+  output: 'export',
+  trailingSlash: true,
   images: {
-    unoptimized: true,        // GitHub Pages не поддерживает Image Optimization
+    unoptimized: true,
   },
-  // basePath НЕ нужен для кастомного домена volna360.ru
-}
+  allowedDevOrigins: ['http://192.168.0.105:3000'],
+};
 
-export default nextConfig
+export default nextConfig;

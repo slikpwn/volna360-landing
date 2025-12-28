@@ -1,7 +1,8 @@
-/* ==================== CSS VARIABLES — THEMES ==================== */
+@import "tailwindcss";
 
+/* ==================== CSS VARIABLES — THEMES ==================== */
 :root {
-  /* Accent colors (не меняем) */
+  /* Accent colors */
   --accent-cyan: #06b6d4;
   --accent-cyan-hover: #22d3ee;
   --accent-purple: #8b5cf6;
@@ -12,7 +13,7 @@
   --accent-gold-hover: #E8C778;
   --accent-gold-muted: rgba(212, 168, 83, 0.2);
 
-  /* Teal (из логотипа, для будущего) */
+  /* Teal */
   --accent-teal: #2D8B8B;
   --accent-teal-hover: #3BA5A5;
 
@@ -26,13 +27,13 @@
 }
 
 /* ==================== DARK THEME (DEFAULT) ==================== */
-
 [data-theme="dark"] {
   --bg-primary: #020814;
   --bg-secondary: #0a1628;
   --bg-tertiary: #0f172a;
   --bg-card: rgba(15, 23, 42, 0.6);
   --bg-card-hover: rgba(15, 23, 42, 0.8);
+  --bg-header: rgba(10, 22, 40, 0.85);
 
   --text-primary: #ffffff;
   --text-secondary: #cbd5e1;
@@ -56,13 +57,13 @@
 }
 
 /* ==================== LIGHT THEME ==================== */
-
 [data-theme="light"] {
   --bg-primary: #ffffff;
   --bg-secondary: #f8fafc;
   --bg-tertiary: #f1f5f9;
   --bg-card: rgba(255, 255, 255, 0.8);
   --bg-card-hover: rgba(255, 255, 255, 0.95);
+  --bg-header: rgba(255, 255, 255, 0.85);
 
   --text-primary: #0f172a;
   --text-secondary: #334155;
@@ -86,7 +87,6 @@
 }
 
 /* ==================== BASE STYLES ==================== */
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -143,4 +143,20 @@ img {
 ::selection {
   background: rgba(6, 182, 212, 0.3);
   color: var(--text-primary);
+}
+
+/* ==================== FLOATING BUBBLES ANIMATION ==================== */
+@keyframes floatBubble {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(40px, -40px) scale(1.05);
+  }
+  50% {
+    transform: translate(-30px, 30px) scale(0.95);
+  }
+  75% {
+    transform: translate(30px, 20px) scale(1.02);
+  }
 }

@@ -2,6 +2,7 @@
   "name": "volna360-landing",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,22 +10,21 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@types/react": "^18.3.27",
-    "@types/react-dom": "^18.3.7",
     "framer-motion": "11.15.0",
     "lucide-react": "^0.562.0",
     "next": "16.1.1",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "tailwindcss": "^3.4.19"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/postcss": "^4.1.18",
     "@types/node": "^20",
-    "autoprefixer": "^10.4.23",
+    "@types/react": "^18.3.27",
+    "@types/react-dom": "^18.3.7",
     "eslint": "^9",
     "eslint-config-next": "16.1.1",
     "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18",
     "typescript": "^5"
   }
 }
