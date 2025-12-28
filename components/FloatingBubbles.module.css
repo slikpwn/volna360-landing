@@ -1,0 +1,22 @@
+.container {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  will-change: transform, left, top;
+  transition: opacity 0.5s ease;
+}
+
+/* Reduce on mobile for performance */
+@media (max-width: 768px) {
+  .bubble {
+    filter: blur(30px);
+  }
+}

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c753c0bb-916e-4b73-81f9-c4593bde2650" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/volna360-landing.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/page.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/AnimatedCounter.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ComparisonTimeline.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ComparisonTimeline.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/CursorSpotlight.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/FloatingBubbles.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/FloatingBubbles.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Header.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/MagneticButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/PhoneMockup.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/PhoneMockup.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Roadmap.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Roadmap.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ScrollProgressRing.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ScrollProgressRing.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ThemeToggle.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ThemeToggle.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/TiltCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/TypeWriter.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hooks/useMousePosition.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hooks/useScrollAnimation.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="37Lpzab2gYep9VSbQPkDDGWE4Ed" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Settings.Puppet&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-f2b7a9f6281b-6e1f45a539f7-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.29346.142" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c753c0bb-916e-4b73-81f9-c4593bde2650" name="Changes" comment="" />
+      <created>1766692468669</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1766692468669</updated>
+    </task>
+    <servers />
+  </component>
+</project>

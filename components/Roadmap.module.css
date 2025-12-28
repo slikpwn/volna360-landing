@@ -1,0 +1,294 @@
+.wrapper {
+  position: relative;
+  padding: 20px 0;
+}
+
+/* Timeline Line */
+.timelineLine {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  right: 20px;
+  height: 4px;
+  background: var(--border-secondary);
+  border-radius: 2px;
+  z-index: 0;
+}
+
+.timelineProgress {
+  width: 75%;
+  height: 100%;
+  background: linear-gradient(90deg, #34d399, #06b6d4, #8b5cf6, #D4A853, #ec4899);
+  border-radius: 2px;
+}
+
+/* Phases Container — горизонтальный скролл на мобильных */
+.phases {
+  display: flex;
+  gap: 12px;
+  padding: 0 10px 20px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.phases::-webkit-scrollbar {
+  display: none;
+}
+
+/* Single Phase */
+.phase {
+  flex: 0 0 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.phase:hover {
+  transform: translateY(-4px);
+}
+
+.phaseActive {
+  transform: translateY(-4px);
+}
+
+/* Node */
+.node {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid;
+  background: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  margin-bottom: 8px;
+}
+
+.nodeInner {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.nodePulse {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0; }
+}
+
+/* Status Badge */
+.status {
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.statusDone {
+  background: rgba(52, 211, 153, 0.15);
+  color: #34d399;
+}
+
+.statusCurrent {
+  background: rgba(236, 72, 153, 0.15);
+  color: #ec4899;
+  animation: statusPulse 2s ease-in-out infinite;
+}
+
+@keyframes statusPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.4); }
+  50% { box-shadow: 0 0 0 6px rgba(236, 72, 153, 0); }
+}
+
+.statusUpcoming {
+  background: var(--bg-tertiary);
+  color: var(--text-muted);
+}
+
+/* Card */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: 12px;
+  padding: 14px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.phaseActive .card {
+  border-color: var(--border-secondary);
+  box-shadow: var(--shadow-md);
+}
+
+.cardHeader {
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+.cardPeriod {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.cardItems {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cardItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--text-tertiary);
+}
+
+.cardItemDot {
+  width: 6px;
+  height: 6px;
+  min-width: 6px;
+  border-radius: 50%;
+}
+
+/* Legend */
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.legendDotPulse {
+  position: relative;
+  width: 10px;
+  height: 10px;
+}
+
+.legendDotPulse span {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+}
+
+.legendDotPulse::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 2px solid #ec4899;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.legendDotEmpty {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--border-secondary);
+}
+
+/* ==================== DESKTOP — БЕЗ СКРОЛЛА ==================== */
+@media (min-width: 1024px) {
+  .timelineLine {
+    left: 40px;
+    right: 40px;
+  }
+
+  .phases {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+    padding: 0 20px 20px;
+    overflow: visible;
+  }
+
+  .phase {
+    flex: none;
+  }
+
+  .node {
+    width: 24px;
+    height: 24px;
+  }
+
+  .nodeInner {
+    width: 10px;
+    height: 10px;
+  }
+
+  .status {
+    font-size: 10px;
+    padding: 4px 12px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .cardHeader {
+    font-size: 15px;
+  }
+
+  .cardPeriod {
+    font-size: 12px;
+  }
+
+  .cardItem {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .phases {
+    gap: 24px;
+    padding: 0 40px 20px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .cardHeader {
+    font-size: 16px;
+  }
+
+  .cardItem {
+    font-size: 13px;
+  }
+}

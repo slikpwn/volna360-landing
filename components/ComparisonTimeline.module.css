@@ -1,0 +1,301 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.column {
+  flex: 1;
+}
+
+.columnHeader {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.headerBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.headerBadgeIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.headerBadgeBad {
+  background: rgba(248, 113, 113, 0.15);
+  color: #f87171;
+  border: 2px solid rgba(248, 113, 113, 0.4);
+}
+
+.headerBadgeGood {
+  background: rgba(52, 211, 153, 0.15);
+  color: #34d399;
+  border: 2px solid rgba(52, 211, 153, 0.4);
+}
+
+/* Timeline Container */
+.timeline {
+  position: relative;
+  margin-left: 70px;
+  padding-left: 40px;
+}
+
+/* Вертикальная линия */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 60px;
+  width: 3px;
+  background: var(--border-secondary);
+  border-radius: 2px;
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* Точка на линии */
+.timelineDot {
+  position: absolute;
+  left: -46px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 3px solid;
+  background: var(--bg-primary);
+  z-index: 2;
+}
+
+.timelineItemBad .timelineDot {
+  border-color: #f87171;
+}
+
+.timelineItemGood .timelineDot {
+  border-color: #34d399;
+}
+
+/* ВРЕМЯ — СЛЕВА ОТ ЛИНИИ */
+.timelineTime {
+  position: absolute;
+  left: -110px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  font-size: 18px;
+  font-weight: 800;
+  text-align: right;
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  letter-spacing: -0.5px;
+}
+
+.timelineItemBad .timelineTime {
+  color: #f87171;
+}
+
+.timelineItemGood .timelineTime {
+  color: #34d399;
+}
+
+/* Карточка */
+.timelineCard {
+  display: flex;
+  gap: 16px;
+  padding: 18px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.timelineCard:hover {
+  transform: translateX(8px);
+  border-color: var(--border-secondary);
+}
+
+.timelineItemBad .timelineCard:hover {
+  border-color: rgba(248, 113, 113, 0.4);
+  box-shadow: 0 8px 30px rgba(248, 113, 113, 0.1);
+}
+
+.timelineItemGood .timelineCard:hover {
+  border-color: rgba(52, 211, 153, 0.4);
+  box-shadow: 0 8px 30px rgba(52, 211, 153, 0.1);
+}
+
+.timelineIcon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.timelineItemBad .timelineIcon {
+  background: rgba(248, 113, 113, 0.1);
+  color: #f87171;
+}
+
+.timelineItemGood .timelineIcon {
+  background: rgba(52, 211, 153, 0.1);
+  color: #34d399;
+}
+
+.timelineIcon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.timelineContent {
+  flex: 1;
+}
+
+.timelineTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.timelineDesc {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  line-height: 1.4;
+}
+
+/* Результат внизу */
+.timelineResult {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 900;
+  margin-top: 16px;
+  margin-left: 0;
+}
+
+.timelineResultBad {
+  background: rgba(248, 113, 113, 0.1);
+  color: #f87171;
+  border: 2px solid rgba(248, 113, 113, 0.3);
+}
+
+.timelineResultGood {
+  background: rgba(52, 211, 153, 0.1);
+  color: #34d399;
+  border: 2px solid rgba(52, 211, 153, 0.3);
+}
+
+.resultIconSvg {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resultIconSvg svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Разделитель VS */
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 24px 0;
+}
+
+.dividerLine {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--border-secondary), transparent);
+}
+
+.dividerText {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--text-muted);
+  padding: 10px 20px;
+  background: var(--bg-card);
+  border: 2px solid var(--border-primary);
+  border-radius: 50px;
+}
+
+/* ==================== DESKTOP ==================== */
+@media (min-width: 900px) {
+  .container {
+    flex-direction: row;
+    gap: 50px;
+  }
+
+  .divider {
+    flex-direction: column;
+    padding: 0 24px;
+  }
+
+  .dividerLine {
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, var(--border-secondary), transparent);
+  }
+
+  .timeline {
+    margin-left: 80px;
+    padding-left: 50px;
+  }
+
+  .timelineDot {
+    left: -56px;
+  }
+
+  .timelineTime {
+    left: -130px;
+    font-size: 20px;
+    width: 70px;
+  }
+
+  .timelineCard {
+    padding: 20px 24px;
+  }
+
+  .timelineIcon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+  }
+
+  .timelineIcon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .timelineTitle {
+    font-size: 17px;
+  }
+
+  .timelineDesc {
+    font-size: 14px;
+  }
+}
