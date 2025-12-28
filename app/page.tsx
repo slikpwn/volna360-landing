@@ -12,6 +12,9 @@ import FloatingBubbles from '@/components/FloatingBubbles';
 
 const BOT_LINK = 'https://t.me/Volna360_bot';
 
+// Базовый путь для GitHub Pages (замени 'volna360-landing' на название твоего репозитория)
+const BASE_PATH = process.env.NODE_ENV === 'production' ? '/volna360-landing' : '';
+
 // ==================== ICONS ====================
 
 const ClockIcon = () => (
@@ -363,7 +366,7 @@ export default function Home() {
           <div className={styles.heroLogo}>
             <div className={styles.heroLogoGlow} />
             <img
-              src="/images/logo-icon.png"
+              src={`${BASE_PATH}/images/logo-icon.png`}
               alt="Volna360"
               className={styles.heroLogoImage}
             />
@@ -692,7 +695,7 @@ export default function Home() {
           <div className={styles.footerTop}>
             <div className={styles.footerBrand}>
               <img
-                src="/images/logo-icon.png"
+                src={`${BASE_PATH}/images/logo-icon.png`}
                 alt="Volna360"
                 className={styles.footerLogo}
               />
