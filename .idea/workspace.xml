@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c753c0bb-916e-4b73-81f9-c4593bde2650" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/ThemeProvider.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LANDING_MANIFEST_v1.0.md" beforeDir="false" afterPath="$PROJECT_DIR$/LANDING_MANIFEST_v1.0.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/robots.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/robots.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/sitemap.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/sitemap.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/StructuredData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/StructuredData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/privacy/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/privacy/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/terms/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/terms/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
